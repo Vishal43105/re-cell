@@ -286,22 +286,22 @@ const SupplySection = () => {
   const grades = ["New", "Like New (Activated)", "A+"];
 
   return (
-    <section id="supply" className="py-24 md:py-32 relative">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="supply" className="py-16 sm:py-24 md:py-32 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
-          className="mb-12"
+          className="mb-8 sm:mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">What we supply</h2>
-          <p className="text-zinc-400 max-w-2xl">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">What we supply</h2>
+          <p className="text-zinc-400 max-w-2xl text-sm sm:text-base">
             Wholesale Apple ecosystem inventory for professional buyers across key global markets.
           </p>
         </motion.div>
 
         <motion.div
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4"
           variants={staggerContainer}
           initial="initial"
           whileInView="animate"
@@ -310,19 +310,19 @@ const SupplySection = () => {
           {products.map((product, i) => (
             <motion.div
               key={i}
-              className="product-card p-6 rounded-xl"
+              className="product-card p-4 sm:p-6 rounded-xl"
               variants={fadeInUp}
               data-testid={`product-${product.name.toLowerCase().replace(/\s/g, '-')}`}
             >
-              <product.icon className="text-[#D5A528] mb-4" size={28} />
-              <h4 className="text-white font-semibold mb-2">{product.name}</h4>
-              <p className="text-sm text-zinc-500">{product.desc}</p>
+              <product.icon className="text-[#D5A528] mb-3 sm:mb-4" size={24} />
+              <h4 className="text-white font-semibold mb-1 sm:mb-2 text-sm sm:text-base">{product.name}</h4>
+              <p className="text-xs sm:text-sm text-zinc-500">{product.desc}</p>
             </motion.div>
           ))}
         </motion.div>
 
         <motion.div
-          className="flex flex-wrap gap-3 mt-8"
+          className="flex flex-wrap gap-2 sm:gap-3 mt-6 sm:mt-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -331,7 +331,7 @@ const SupplySection = () => {
           {grades.map((grade) => (
             <span
               key={grade}
-              className="px-4 py-2 rounded-full text-xs uppercase tracking-wider text-zinc-400 border border-[#D5A528]/20 bg-[#D5A528]/5"
+              className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[10px] sm:text-xs uppercase tracking-wider text-zinc-400 border border-[#D5A528]/20 bg-[#D5A528]/5"
             >
               {grade}
             </span>

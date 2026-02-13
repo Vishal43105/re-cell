@@ -396,7 +396,7 @@ const FootprintSection = () => {
     { title: "Consistent volume", desc: "Structured supply designed for repeat purchase cycles." },
     { title: "Transparent grading", desc: "No surprises. Clear expectations and trade communication." },
     { title: "Operational control", desc: "Secure workflow from receipt → processing → dispatch." },
-    { title: "Compliance-ready", desc: "Serial-level reporting and wipe documentation available on request." },
+    { title: "Compliance-ready", desc: "IMEI recording and data wipe documentation available on request." },
   ];
 
   return (
@@ -723,11 +723,10 @@ const ContactSection = () => {
                       <SelectValue placeholder="Select" />
                     </SelectTrigger>
                     <SelectContent className="bg-[#09090b] border-white/10">
-                      <SelectItem value="Brand New / CPO">Brand New / CPO</SelectItem>
-                      <SelectItem value="Grade A">Grade A</SelectItem>
-                      <SelectItem value="Grade B">Grade B</SelectItem>
-                      <SelectItem value="Grade C">Grade C</SelectItem>
-                      <SelectItem value="AS-IS / Mixed">AS-IS / Mixed</SelectItem>
+                      <SelectItem value="New">New</SelectItem>
+                      <SelectItem value="Like New (Activated)">Like New (Activated)</SelectItem>
+                      <SelectItem value="A+">A+</SelectItem>
+                      <SelectItem value="Mixed">Mixed</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>

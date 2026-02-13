@@ -184,10 +184,10 @@ async def get_stock_summary():
     """Get public stock summary (categories only, no prices)"""
     return {
         "categories": [
-            {"name": "iPhone", "grades": ["Brand New", "CPO", "Grade A", "Grade B", "Grade C", "AS-IS"]},
-            {"name": "iPad", "grades": ["Brand New", "CPO", "Grade A", "Grade B", "Grade C"]},
-            {"name": "MacBook", "grades": ["CPO", "Grade A", "Grade B"]},
-            {"name": "AirPods", "grades": ["Brand New", "Grade A", "Grade B"]},
+            {"name": "iPhone", "grades": ["New", "Like New (Activated)", "A+"]},
+            {"name": "iPad", "grades": ["New", "Like New (Activated)", "A+"]},
+            {"name": "MacBook", "grades": ["New", "Like New (Activated)", "A+"]},
+            {"name": "AirPods", "grades": ["New", "Like New (Activated)", "A+"]},
         ],
         "note": "Contact us for current availability and pricing"
     }

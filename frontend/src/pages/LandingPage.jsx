@@ -802,9 +802,9 @@ const ContactSection = () => {
               ))}
             </div>
 
-            <div className="mt-6 pt-6 border-t border-white/10">
-              <p className="text-white font-medium">Re-Cell Technology Solutions Limited</p>
-              <p className="text-sm text-zinc-500">Maynooth, Co. Kildare, Ireland</p>
+            <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-white/10">
+              <p className="text-white font-medium text-sm sm:text-base">Re-Cell Technology Solutions Limited</p>
+              <p className="text-xs sm:text-sm text-zinc-500">Maynooth, Co. Kildare, Ireland</p>
             </div>
           </motion.div>
         </div>
@@ -816,19 +816,19 @@ const ContactSection = () => {
 // Footer
 const Footer = () => {
   return (
-    <footer className="border-t border-white/5 py-8">
-      <div className="max-w-7xl mx-auto px-6">
+    <footer className="border-t border-white/5 py-6 sm:py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-zinc-500">
+          <p className="text-xs sm:text-sm text-zinc-500 text-center md:text-left">
             © {new Date().getFullYear()} Re-Cell Technology Solutions Limited. All rights reserved.
           </p>
-          <div className="flex gap-6">
-            <a href="#top" className="footer-link text-sm">Top</a>
-            <a href="#contact" className="footer-link text-sm">Contact</a>
-            <a href="/admin" className="footer-link text-sm">Admin</a>
+          <div className="flex gap-4 sm:gap-6">
+            <a href="#top" className="footer-link text-xs sm:text-sm">Top</a>
+            <a href="#contact" className="footer-link text-xs sm:text-sm">Contact</a>
+            <a href="/admin" className="footer-link text-xs sm:text-sm">Admin</a>
           </div>
         </div>
-        <p className="text-xs text-zinc-600 mt-4 text-center md:text-left">
+        <p className="text-[10px] sm:text-xs text-zinc-600 mt-3 sm:mt-4 text-center md:text-left">
           Wholesale enquiries only. If you are a consumer, contact the marketplace/retailer you purchased from.
         </p>
       </div>

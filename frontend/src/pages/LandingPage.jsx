@@ -165,67 +165,70 @@ const Navigation = () => {
 // Hero Section
 const HeroSection = () => {
   return (
-    <section id="top" className="relative min-h-screen flex items-center pt-20 hero-gradient geometric-lines overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 py-20 relative z-10">
-        <div className="grid lg:grid-cols-5 gap-8 items-center">
+    <section id="top" className="relative min-h-screen flex items-center pt-16 md:pt-20 hero-gradient geometric-lines overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 md:py-20 relative z-10">
+        <div className="grid lg:grid-cols-5 gap-6 lg:gap-8 items-center">
           {/* Left Content */}
           <motion.div
-            className="lg:col-span-3 glass-card rounded-2xl p-8 md:p-10"
+            className="lg:col-span-3 glass-card rounded-2xl p-5 sm:p-8 md:p-10"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
             {/* Kicker */}
-            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-[#D5A528]/30 bg-[#D5A528]/10 mb-6">
+            <div className="inline-flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 rounded-full border border-[#D5A528]/30 bg-[#D5A528]/10 mb-4 sm:mb-6">
               <span className="w-2 h-2 rounded-full bg-gradient-to-r from-[#D5A528] to-[#E7C873] animate-pulse" />
-              <span className="text-xs text-zinc-400 uppercase tracking-[0.2em]">Europe • UAE • USA</span>
+              <span className="text-[10px] sm:text-xs text-zinc-400 uppercase tracking-[0.15em] sm:tracking-[0.2em]">Europe • UAE • USA</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
               Global wholesale distribution of{" "}
               <span className="gold-text">Apple devices</span>.
             </h1>
 
-            <p className="text-zinc-400 text-lg max-w-2xl mb-8">
+            <p className="text-zinc-400 text-base sm:text-lg max-w-2xl mb-6 sm:mb-8">
               Supplying iPhone, iPad, MacBook and AirPods inventory to professional buyers.
               Built for volume, speed, and repeat supply.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-4 mb-8">
-              <a href="#contact" data-testid="hero-cta-partner">
-                <Button className="bg-[#D5A528] hover:bg-[#E7C873] text-black font-semibold px-6 py-3 rounded-full transition-all hover:shadow-[0_0_30px_rgba(213,165,40,0.4)] flex items-center gap-2">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-6 sm:mb-8">
+              <a href="#contact" data-testid="hero-cta-partner" className="w-full sm:w-auto">
+                <Button className="w-full sm:w-auto bg-[#D5A528] hover:bg-[#E7C873] text-black font-semibold px-5 sm:px-6 py-3 rounded-full transition-all hover:shadow-[0_0_30px_rgba(213,165,40,0.4)] flex items-center justify-center gap-2">
                   Become a Trade Partner
                   <ArrowRight size={18} />
                 </Button>
               </a>
-              <a href="#process" data-testid="hero-cta-process">
-                <Button variant="outline" className="border-white/10 text-white hover:bg-white/5 px-6 py-3 rounded-full">
-                  How it works
-                </Button>
-              </a>
-              <a
-                href="https://wa.me/353830450305"
-                target="_blank"
-                rel="noreferrer"
-                data-testid="hero-cta-whatsapp"
-              >
-                <Button variant="outline" className="border-white/10 text-white hover:bg-white/5 px-6 py-3 rounded-full flex items-center gap-2">
-                  <MessageCircle size={18} />
-                  WhatsApp
-                </Button>
-              </a>
+              <div className="flex gap-3 sm:gap-4">
+                <a href="#process" data-testid="hero-cta-process" className="flex-1 sm:flex-none">
+                  <Button variant="outline" className="w-full sm:w-auto border-white/10 text-white hover:bg-white/5 px-4 sm:px-6 py-3 rounded-full text-sm sm:text-base">
+                    How it works
+                  </Button>
+                </a>
+                <a
+                  href="https://wa.me/353830450305"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-testid="hero-cta-whatsapp"
+                  className="flex-1 sm:flex-none"
+                >
+                  <Button variant="outline" className="w-full sm:w-auto border-white/10 text-white hover:bg-white/5 px-4 sm:px-6 py-3 rounded-full flex items-center justify-center gap-2 text-sm sm:text-base">
+                    <MessageCircle size={18} />
+                    WhatsApp
+                  </Button>
+                </a>
+              </div>
             </div>
 
             {/* Stats */}
-            <div className="border-t border-white/10 pt-6 flex flex-wrap gap-6">
+            <div className="border-t border-white/10 pt-4 sm:pt-6 grid grid-cols-2 sm:flex sm:flex-wrap gap-3 sm:gap-6">
               {[
                 { value: "2,500+", label: "weekly capacity" },
                 { value: "Same-day", label: "shipment" },
                 { value: "Data Cleared", label: "units" },
                 { value: "IMEI", label: "recording" },
               ].map((stat, i) => (
-                <div key={i} className="flex items-center gap-2 text-sm">
+                <div key={i} className="flex items-center gap-2 text-xs sm:text-sm">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#D5A528]/60" />
                   <span className="text-white font-medium">{stat.value}</span>
                   <span className="text-zinc-500">{stat.label}</span>
@@ -236,22 +239,22 @@ const HeroSection = () => {
 
           {/* Right Content */}
           <motion.div
-            className="lg:col-span-2 glass-card rounded-2xl p-6"
+            className="lg:col-span-2 glass-card rounded-2xl p-5 sm:p-6"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h3 className="text-xs text-zinc-500 uppercase tracking-[0.2em] mb-4">Trade Buyer Focus</h3>
-            <div className="space-y-3">
+            <h3 className="text-xs text-zinc-500 uppercase tracking-[0.2em] mb-3 sm:mb-4">Trade Buyer Focus</h3>
+            <div className="space-y-2 sm:space-y-3">
               {[
                 { title: "Wholesale-first operations", desc: "No retail noise. Fast quotes, clean terms, reliable dispatch." },
                 { title: "Clear grading, realistic batches", desc: "New, Like New (Activated), and A+ depending on batch availability." },
                 { title: "Structured sourcing", desc: "Professional channels including telecom auctions and enterprise supply." },
                 { title: "Built for repeat supply", desc: "We work with serious buyers who need consistency and speed." },
               ].map((item, i) => (
-                <div key={i} className="p-4 rounded-xl bg-black/40 border border-white/5 card-hover">
-                  <h4 className="text-white font-medium mb-1">{item.title}</h4>
-                  <p className="text-sm text-zinc-500">{item.desc}</p>
+                <div key={i} className="p-3 sm:p-4 rounded-xl bg-black/40 border border-white/5 card-hover">
+                  <h4 className="text-white font-medium mb-1 text-sm sm:text-base">{item.title}</h4>
+                  <p className="text-xs sm:text-sm text-zinc-500">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -259,9 +262,9 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator - hidden on mobile */}
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden sm:block"
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 2 }}
       >

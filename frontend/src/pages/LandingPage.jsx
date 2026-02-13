@@ -703,11 +703,11 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
                 <div>
-                  <label className="block text-xs text-zinc-500 uppercase tracking-wider mb-2">Products</label>
+                  <label className="block text-[10px] sm:text-xs text-zinc-500 uppercase tracking-wider mb-1.5 sm:mb-2">Products</label>
                   <Select value={formData.products} onValueChange={(v) => handleChange("products", v)} required>
-                    <SelectTrigger className="bg-black/50 border-white/10 focus:border-[#D5A528] text-white" data-testid="select-products">
+                    <SelectTrigger className="bg-black/50 border-white/10 focus:border-[#D5A528] text-white text-sm" data-testid="select-products">
                       <SelectValue placeholder="Select" />
                     </SelectTrigger>
                     <SelectContent className="bg-[#09090b] border-white/10">
@@ -720,9 +720,9 @@ const ContactSection = () => {
                   </Select>
                 </div>
                 <div>
-                  <label className="block text-xs text-zinc-500 uppercase tracking-wider mb-2">Grade preference</label>
+                  <label className="block text-[10px] sm:text-xs text-zinc-500 uppercase tracking-wider mb-1.5 sm:mb-2">Grade preference</label>
                   <Select value={formData.grade} onValueChange={(v) => handleChange("grade", v)} required>
-                    <SelectTrigger className="bg-black/50 border-white/10 focus:border-[#D5A528] text-white" data-testid="select-grade">
+                    <SelectTrigger className="bg-black/50 border-white/10 focus:border-[#D5A528] text-white text-sm" data-testid="select-grade">
                       <SelectValue placeholder="Select" />
                     </SelectTrigger>
                     <SelectContent className="bg-[#09090b] border-white/10">
@@ -736,23 +736,23 @@ const ContactSection = () => {
               </div>
 
               <div>
-                <label className="block text-xs text-zinc-500 uppercase tracking-wider mb-2">Request details</label>
+                <label className="block text-[10px] sm:text-xs text-zinc-500 uppercase tracking-wider mb-1.5 sm:mb-2">Request details</label>
                 <Textarea
                   value={formData.message}
                   onChange={(e) => handleChange("message", e.target.value)}
                   placeholder="Models, quantities, target pricing, delivery country, timelines..."
                   required
-                  rows={4}
-                  className="bg-black/50 border-white/10 focus:border-[#D5A528] text-white placeholder:text-zinc-600 resize-none"
+                  rows={3}
+                  className="bg-black/50 border-white/10 focus:border-[#D5A528] text-white placeholder:text-zinc-600 resize-none text-sm"
                   data-testid="input-message"
                 />
               </div>
 
-              <div className="flex flex-wrap items-center gap-4">
+              <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4">
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-[#D5A528] hover:bg-[#E7C873] text-black font-semibold px-6 py-3 rounded-full transition-all hover:shadow-[0_0_30px_rgba(213,165,40,0.4)] disabled:opacity-50"
+                  className="w-full sm:w-auto bg-[#D5A528] hover:bg-[#E7C873] text-black font-semibold px-5 sm:px-6 py-3 rounded-full transition-all hover:shadow-[0_0_30px_rgba(213,165,40,0.4)] disabled:opacity-50 text-sm sm:text-base"
                   data-testid="submit-enquiry-btn"
                 >
                   {isSubmitting ? (
@@ -769,15 +769,16 @@ const ContactSection = () => {
                   target="_blank"
                   rel="noreferrer"
                   data-testid="contact-whatsapp-btn"
+                  className="w-full sm:w-auto"
                 >
-                  <Button variant="outline" className="border-white/10 text-white hover:bg-white/5 px-6 py-3 rounded-full flex items-center gap-2">
+                  <Button variant="outline" className="w-full sm:w-auto border-white/10 text-white hover:bg-white/5 px-5 sm:px-6 py-3 rounded-full flex items-center justify-center gap-2 text-sm sm:text-base">
                     <MessageCircle size={18} />
                     WhatsApp
                   </Button>
                 </a>
               </div>
 
-              <p className="text-sm text-zinc-500">
+              <p className="text-xs sm:text-sm text-zinc-500">
                 Email: <a href="mailto:info@re-cell.ie" className="text-[#D5A528] hover:underline">info@re-cell.ie</a> •
                 Phone: <a href="tel:+353830450305" className="text-[#D5A528] hover:underline">+353 83 045 0305</a>
               </p>
@@ -786,17 +787,17 @@ const ContactSection = () => {
 
           {/* Requirements */}
           <motion.div
-            className="glass-card rounded-2xl p-6 md:p-8"
+            className="glass-card rounded-2xl p-4 sm:p-6 md:p-8"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-xs text-zinc-500 uppercase tracking-[0.2em] mb-4">What we need to quote fast</h3>
-            <div className="space-y-3">
+            <h3 className="text-xs text-zinc-500 uppercase tracking-[0.2em] mb-3 sm:mb-4">What we need to quote fast</h3>
+            <div className="space-y-2 sm:space-y-3">
               {quoteRequirements.map((req, i) => (
-                <div key={i} className="p-4 rounded-xl bg-black/40 border border-white/5">
-                  <h4 className="text-white font-medium mb-1">{req.title}</h4>
-                  <p className="text-sm text-zinc-500">{req.desc}</p>
+                <div key={i} className="p-3 sm:p-4 rounded-xl bg-black/40 border border-white/5">
+                  <h4 className="text-white font-medium mb-1 text-sm sm:text-base">{req.title}</h4>
+                  <p className="text-xs sm:text-sm text-zinc-500">{req.desc}</p>
                 </div>
               ))}
             </div>

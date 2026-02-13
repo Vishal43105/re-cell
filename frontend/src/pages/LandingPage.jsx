@@ -598,84 +598,84 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 md:py-32">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="contact" className="py-16 sm:py-24 md:py-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
-          className="mb-12"
+          className="mb-8 sm:mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Trade enquiries</h2>
-          <p className="text-zinc-400">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Trade enquiries</h2>
+          <p className="text-zinc-400 text-sm sm:text-base">
             Professional buyers only. If you want a quote, submit real details and volume requirements.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-6">
+        <div className="grid lg:grid-cols-2 gap-4 sm:gap-6">
           {/* Form */}
           <motion.div
-            className="glass-card rounded-2xl p-6 md:p-8"
+            className="glass-card rounded-2xl p-4 sm:p-6 md:p-8"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid sm:grid-cols-2 gap-4">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+              <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
                 <div>
-                  <label className="block text-xs text-zinc-500 uppercase tracking-wider mb-2">Full name</label>
+                  <label className="block text-[10px] sm:text-xs text-zinc-500 uppercase tracking-wider mb-1.5 sm:mb-2">Full name</label>
                   <Input
                     value={formData.name}
                     onChange={(e) => handleChange("name", e.target.value)}
                     placeholder="Your name"
                     required
-                    className="bg-black/50 border-white/10 focus:border-[#D5A528] text-white placeholder:text-zinc-600"
+                    className="bg-black/50 border-white/10 focus:border-[#D5A528] text-white placeholder:text-zinc-600 text-sm"
                     data-testid="input-name"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs text-zinc-500 uppercase tracking-wider mb-2">Company</label>
+                  <label className="block text-[10px] sm:text-xs text-zinc-500 uppercase tracking-wider mb-1.5 sm:mb-2">Company</label>
                   <Input
                     value={formData.company}
                     onChange={(e) => handleChange("company", e.target.value)}
                     placeholder="Company name"
                     required
-                    className="bg-black/50 border-white/10 focus:border-[#D5A528] text-white placeholder:text-zinc-600"
+                    className="bg-black/50 border-white/10 focus:border-[#D5A528] text-white placeholder:text-zinc-600 text-sm"
                     data-testid="input-company"
                   />
                 </div>
               </div>
 
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
                 <div>
-                  <label className="block text-xs text-zinc-500 uppercase tracking-wider mb-2">Email</label>
+                  <label className="block text-[10px] sm:text-xs text-zinc-500 uppercase tracking-wider mb-1.5 sm:mb-2">Email</label>
                   <Input
                     type="email"
                     value={formData.email}
                     onChange={(e) => handleChange("email", e.target.value)}
                     placeholder="name@company.com"
                     required
-                    className="bg-black/50 border-white/10 focus:border-[#D5A528] text-white placeholder:text-zinc-600"
+                    className="bg-black/50 border-white/10 focus:border-[#D5A528] text-white placeholder:text-zinc-600 text-sm"
                     data-testid="input-email"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs text-zinc-500 uppercase tracking-wider mb-2">Phone / WhatsApp</label>
+                  <label className="block text-[10px] sm:text-xs text-zinc-500 uppercase tracking-wider mb-1.5 sm:mb-2">Phone / WhatsApp</label>
                   <Input
                     value={formData.phone}
                     onChange={(e) => handleChange("phone", e.target.value)}
                     placeholder="+00 ..."
-                    className="bg-black/50 border-white/10 focus:border-[#D5A528] text-white placeholder:text-zinc-600"
+                    className="bg-black/50 border-white/10 focus:border-[#D5A528] text-white placeholder:text-zinc-600 text-sm"
                     data-testid="input-phone"
                   />
                 </div>
               </div>
 
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
                 <div>
-                  <label className="block text-xs text-zinc-500 uppercase tracking-wider mb-2">Buying region</label>
+                  <label className="block text-[10px] sm:text-xs text-zinc-500 uppercase tracking-wider mb-1.5 sm:mb-2">Buying region</label>
                   <Select value={formData.region} onValueChange={(v) => handleChange("region", v)} required>
-                    <SelectTrigger className="bg-black/50 border-white/10 focus:border-[#D5A528] text-white" data-testid="select-region">
+                    <SelectTrigger className="bg-black/50 border-white/10 focus:border-[#D5A528] text-white text-sm" data-testid="select-region">
                       <SelectValue placeholder="Select" />
                     </SelectTrigger>
                     <SelectContent className="bg-[#09090b] border-white/10">
@@ -688,9 +688,9 @@ const ContactSection = () => {
                   </Select>
                 </div>
                 <div>
-                  <label className="block text-xs text-zinc-500 uppercase tracking-wider mb-2">Target volume</label>
+                  <label className="block text-[10px] sm:text-xs text-zinc-500 uppercase tracking-wider mb-1.5 sm:mb-2">Target volume</label>
                   <Select value={formData.volume} onValueChange={(v) => handleChange("volume", v)} required>
-                    <SelectTrigger className="bg-black/50 border-white/10 focus:border-[#D5A528] text-white" data-testid="select-volume">
+                    <SelectTrigger className="bg-black/50 border-white/10 focus:border-[#D5A528] text-white text-sm" data-testid="select-volume">
                       <SelectValue placeholder="Select" />
                     </SelectTrigger>
                     <SelectContent className="bg-[#09090b] border-white/10">

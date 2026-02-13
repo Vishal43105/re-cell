@@ -351,34 +351,34 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section id="process" className="py-24 md:py-32 bg-[#050505]">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="process" className="py-16 sm:py-24 md:py-32 bg-[#050505]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
-          className="mb-12"
+          className="mb-8 sm:mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">How it works</h2>
-          <p className="text-zinc-400">Simple process. Fast turnaround. No time wasting.</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">How it works</h2>
+          <p className="text-zinc-400 text-sm sm:text-base">Simple process. Fast turnaround. No time wasting.</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
           {steps.map((step, i) => (
             <motion.div
               key={i}
-              className="p-6 rounded-xl bg-[#09090b] border border-white/5 card-hover"
+              className="p-4 sm:p-6 rounded-xl bg-[#09090b] border border-white/5 card-hover"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               data-testid={`process-step-${step.num}`}
             >
-              <div className="step-number w-12 h-12 rounded-xl flex items-center justify-center text-lg font-bold mb-4">
+              <div className="step-number w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center text-base sm:text-lg font-bold mb-3 sm:mb-4">
                 {step.num}
               </div>
-              <h4 className="text-white font-semibold mb-2">{step.title}</h4>
-              <p className="text-sm text-zinc-500">{step.desc}</p>
+              <h4 className="text-white font-semibold mb-1 sm:mb-2 text-sm sm:text-base">{step.title}</h4>
+              <p className="text-xs sm:text-sm text-zinc-500">{step.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -403,16 +403,16 @@ const FootprintSection = () => {
   ];
 
   return (
-    <section id="footprint" className="py-24 md:py-32">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="footprint" className="py-16 sm:py-24 md:py-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
-          className="mb-12"
+          className="mb-8 sm:mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">International footprint</h2>
-          <p className="text-zinc-400 max-w-2xl">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">International footprint</h2>
+          <p className="text-zinc-400 max-w-2xl text-sm sm:text-base">
             We support buyers across Europe, the Middle East and North America with efficient logistics and export capability.
           </p>
         </motion.div>

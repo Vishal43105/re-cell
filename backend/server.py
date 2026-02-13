@@ -347,7 +347,7 @@ async def seed_faq(admin: str = Depends(verify_admin)):
         {
             "id": str(uuid.uuid4()),
             "question": "How does your grading system work?",
-            "answer": "We use industry-standard grading: Brand New (sealed), CPO (Certified Pre-Owned), Grade A (excellent condition, minimal signs of use), Grade B (good condition, light wear), Grade C (functional, visible wear), AS-IS (untested or with known issues).",
+            "answer": "We use clear grading: New (factory sealed), Like New/Activated (opened but pristine, may have been activated), and A+ (excellent condition, minimal signs of use). All units are data cleared with IMEI recording.",
             "order": 3
         },
         {

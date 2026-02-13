@@ -427,25 +427,25 @@ const FootprintSection = () => {
             {/* Decorative gradient */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#D5A528]/10 via-transparent to-[#D5A528]/5 pointer-events-none" />
             
-            <div className="grid lg:grid-cols-2 gap-6 p-6 md:p-8 relative">
+            <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 p-4 sm:p-6 md:p-8 relative">
               {/* Locations */}
               <div>
-                <h3 className="text-xs text-zinc-500 uppercase tracking-[0.2em] mb-4">Operational Presence</h3>
-                <div className="space-y-3">
+                <h3 className="text-xs text-zinc-500 uppercase tracking-[0.2em] mb-3 sm:mb-4">Operational Presence</h3>
+                <div className="space-y-2 sm:space-y-3">
                   {locations.map((loc, i) => (
                     <motion.div
                       key={i}
-                      className="p-4 rounded-xl bg-black/40 border border-white/5 flex items-start gap-3"
+                      className="p-3 sm:p-4 rounded-xl bg-black/40 border border-white/5 flex items-start gap-3"
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: i * 0.1 }}
                       data-testid={`location-${i}`}
                     >
-                      <MapPin className="text-[#D5A528] mt-1 flex-shrink-0" size={18} />
+                      <MapPin className="text-[#D5A528] mt-0.5 flex-shrink-0" size={16} />
                       <div>
-                        <h4 className="text-white font-medium">{loc.name}</h4>
-                        <p className="text-sm text-zinc-500">{loc.detail}</p>
+                        <h4 className="text-white font-medium text-sm sm:text-base">{loc.name}</h4>
+                        <p className="text-xs sm:text-sm text-zinc-500">{loc.detail}</p>
                       </div>
                     </motion.div>
                   ))}
@@ -454,19 +454,19 @@ const FootprintSection = () => {
 
               {/* Why buyers stay */}
               <div>
-                <h3 className="text-xs text-zinc-500 uppercase tracking-[0.2em] mb-4">Why buyers stay</h3>
-                <div className="space-y-3">
+                <h3 className="text-xs text-zinc-500 uppercase tracking-[0.2em] mb-3 sm:mb-4 mt-4 lg:mt-0">Why buyers stay</h3>
+                <div className="space-y-2 sm:space-y-3">
                   {reasons.map((reason, i) => (
                     <motion.div
                       key={i}
-                      className="p-4 rounded-xl bg-black/40 border border-white/5"
+                      className="p-3 sm:p-4 rounded-xl bg-black/40 border border-white/5"
                       initial={{ opacity: 0, x: 20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: i * 0.1 }}
                     >
-                      <h4 className="text-white font-medium mb-1">{reason.title}</h4>
-                      <p className="text-sm text-zinc-500">{reason.desc}</p>
+                      <h4 className="text-white font-medium mb-1 text-sm sm:text-base">{reason.title}</h4>
+                      <p className="text-xs sm:text-sm text-zinc-500">{reason.desc}</p>
                     </motion.div>
                   ))}
                 </div>
@@ -494,8 +494,8 @@ const FAQSection = () => {
         setFaqs([
           { id: "1", question: "What is the minimum order quantity?", answer: "Our minimum order starts at 50 units. For first-time buyers, we recommend starting with a smaller batch to establish the working relationship." },
           { id: "2", question: "What payment methods do you accept?", answer: "We accept bank transfers (SEPA for EU, SWIFT for international), and can discuss other payment arrangements for established partners." },
-          { id: "3", question: "How does your grading system work?", answer: "We use industry-standard grading: Brand New (sealed), CPO (Certified Pre-Owned), Grade A (excellent condition), Grade B (good condition), Grade C (functional, visible wear), AS-IS (untested or with known issues)." },
-          { id: "4", question: "Do you provide warranty?", answer: "Warranty terms depend on the product grade and batch. Brand New and CPO come with manufacturer warranty. Pre-owned grades typically include a DOA protection period." },
+          { id: "3", question: "How does your grading system work?", answer: "We use clear grading: New (factory sealed), Like New/Activated (opened but pristine), and A+ (excellent condition). All units are data cleared with IMEI recording." },
+          { id: "4", question: "Do you provide warranty?", answer: "Warranty terms depend on the product grade and batch. New stock comes with manufacturer warranty. Pre-owned grades typically include a DOA protection period." },
           { id: "5", question: "Can you ship internationally?", answer: "Yes, we ship to Europe, UAE/GCC, USA, and other regions. We handle export documentation and can arrange DDP or DAP shipping." },
           { id: "6", question: "How quickly can you fulfill orders?", answer: "Standard orders ship within 24-48 hours of payment confirmation. Larger orders may require 3-5 business days for processing and quality checks." },
         ]);
@@ -505,8 +505,8 @@ const FAQSection = () => {
   }, []);
 
   return (
-    <section id="faq" className="py-24 md:py-32 bg-[#050505]">
-      <div className="max-w-4xl mx-auto px-6">
+    <section id="faq" className="py-16 sm:py-24 md:py-32 bg-[#050505]">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}

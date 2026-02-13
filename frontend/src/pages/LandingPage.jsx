@@ -221,9 +221,9 @@ const HeroSection = () => {
             <div className="border-t border-white/10 pt-6 flex flex-wrap gap-6">
               {[
                 { value: "2,500+", label: "weekly capacity" },
-                { value: "Same-day", label: "payment on invoice" },
-                { value: "Data wiping", label: "workflow" },
-                { value: "Serial-level", label: "reporting" },
+                { value: "Same-day", label: "shipment" },
+                { value: "Data Cleared", label: "units" },
+                { value: "IMEI", label: "recording" },
               ].map((stat, i) => (
                 <div key={i} className="flex items-center gap-2 text-sm">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#D5A528]/60" />
@@ -245,7 +245,7 @@ const HeroSection = () => {
             <div className="space-y-3">
               {[
                 { title: "Wholesale-first operations", desc: "No retail noise. Fast quotes, clean terms, reliable dispatch." },
-                { title: "Clear grading, realistic batches", desc: "Pre-owned, CPO, and AS-IS depending on batch availability." },
+                { title: "Clear grading, realistic batches", desc: "New, Like New (Activated), and A+ depending on batch availability." },
                 { title: "Structured sourcing", desc: "Professional channels including telecom auctions and enterprise supply." },
                 { title: "Built for repeat supply", desc: "We work with serious buyers who need consistency and speed." },
               ].map((item, i) => (
@@ -280,7 +280,7 @@ const SupplySection = () => {
     { name: "AirPods & Accessories", desc: "High-demand add-ons included when available.", icon: Zap },
   ];
 
-  const grades = ["Brand New", "CPO", "Grade A", "Grade B", "Grade C", "AS-IS"];
+  const grades = ["New", "Like New (Activated)", "A+"];
 
   return (
     <section id="supply" className="py-24 md:py-32 relative">

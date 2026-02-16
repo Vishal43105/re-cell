@@ -86,16 +86,12 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6">
         <nav className="flex items-center justify-between py-4">
           {/* Logo */}
-          <a href="#top" className="flex items-center gap-3" data-testid="logo-link">
+          <a href="#top" className="flex items-center" data-testid="logo-link">
             <img
               src={LOGO_URL}
               alt="Re-Cell Logo"
               className="h-10 w-auto"
             />
-            <div className="hidden sm:block">
-              <div className="font-semibold text-white tracking-tight">Re-Cell Technology Solutions</div>
-              <div className="text-[10px] text-zinc-500 uppercase tracking-[0.2em]">Wholesale Distribution</div>
-            </div>
           </a>
 
           {/* Desktop Navigation */}

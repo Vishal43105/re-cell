@@ -90,7 +90,7 @@ const Navigation = () => {
             <img
               src={LOGO_URL}
               alt="Re-Cell Logo"
-              className="h-10 w-auto"
+              className="h-16 sm:h-20 w-auto"
             />
           </a>
 

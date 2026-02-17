@@ -40,7 +40,7 @@ ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD", "recell2024!")
 # Resend configuration (optional)
 RESEND_API_KEY = os.environ.get("RESEND_API_KEY")
 SENDER_EMAIL = os.environ.get("SENDER_EMAIL", "onboarding@resend.dev")
-NOTIFICATION_EMAIL = "info@re-cell.ie"
+NOTIFICATION_EMAIL = "sean.gavin@istock.ie"
 
 # Configure logging
 logging.basicConfig(
